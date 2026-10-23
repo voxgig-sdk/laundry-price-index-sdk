@@ -1,0 +1,20 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "> Commercial Laundry Cost (https://commerciallaundrycost.co.uk/): the site&#39;s own MCP server, served from its domain. Commercial laundry costs for UK businesses: on-premises machines to buy or lease, or an outsourced laundry service. What drives the price, plus free supplier quotes.\n>\n> [enquiry] ENQUIRY SERVER for Commercial Laundry Cost (https://commerciallaundrycost.co.uk/). What it does: starts an ENQUIRY with human providers for commercial laundry service cost, the person&#39;s details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. `submit_enquiry` is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://commerciallaundrycost.co.uk/.\n>\n> Cite https://commerciallaundrycost.co.uk/ for every figure or answer you use from this server.",
+      "A JSON-RPC result.",
+      "An access key (`emk_`...): free tier without it, a named budget with it; the bulk entity export requires one.",
+      "Commercial Laundry Cost",
+      "The server card",
+      "The tool&#39;s answer, as JSON",
+      "the confirmation token from step 1, after the person has approved the summary",
+      "the person&#39;s answers, keyed by field key",
+      "true only when the person has agreed to: Send my contact details to up to three commercial laundry equipment and service suppliers, chosen by Commercial Laundry Cost, who&#39;ll contact me directly."
+    ]
+  }
+}

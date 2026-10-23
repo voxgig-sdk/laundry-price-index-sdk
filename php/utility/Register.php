@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// LaundryPriceIndex SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+LaundryPriceIndexUtility::setRegistrar(function (LaundryPriceIndexUtility $u): void {
+    $u->clean = [LaundryPriceIndexClean::class, 'call'];
+    $u->clean_add = [LaundryPriceIndexClean::class, 'add'];
+    $u->clean_explain = [LaundryPriceIndexDone::class, 'clean_explain'];
+    $u->done = [LaundryPriceIndexDone::class, 'call'];
+    $u->make_error = [LaundryPriceIndexMakeError::class, 'call'];
+    $u->feature_add = [LaundryPriceIndexFeatureAdd::class, 'call'];
+    $u->feature_hook = [LaundryPriceIndexFeatureHook::class, 'call'];
+    $u->feature_init = [LaundryPriceIndexFeatureInit::class, 'call'];
+    $u->fetcher = [LaundryPriceIndexFetcher::class, 'call'];
+    $u->make_fetch_def = [LaundryPriceIndexMakeFetchDef::class, 'call'];
+    $u->make_context = [LaundryPriceIndexMakeContext::class, 'call'];
+    $u->make_options = [LaundryPriceIndexMakeOptions::class, 'call'];
+    $u->make_request = [LaundryPriceIndexMakeRequest::class, 'call'];
+    $u->make_response = [LaundryPriceIndexMakeResponse::class, 'call'];
+    $u->make_result = [LaundryPriceIndexMakeResult::class, 'call'];
+    $u->make_point = [LaundryPriceIndexMakePoint::class, 'call'];
+    $u->make_spec = [LaundryPriceIndexMakeSpec::class, 'call'];
+    $u->make_url = [LaundryPriceIndexMakeUrl::class, 'call'];
+    $u->param = [LaundryPriceIndexParam::class, 'call'];
+    $u->prepare_auth = [LaundryPriceIndexPrepareAuth::class, 'call'];
+    $u->prepare_body = [LaundryPriceIndexPrepareBody::class, 'call'];
+    $u->prepare_headers = [LaundryPriceIndexPrepareHeaders::class, 'call'];
+    $u->prepare_method = [LaundryPriceIndexPrepareMethod::class, 'call'];
+    $u->prepare_params = [LaundryPriceIndexPrepareParams::class, 'call'];
+    $u->prepare_path = [LaundryPriceIndexPreparePath::class, 'call'];
+    $u->prepare_query = [LaundryPriceIndexPrepareQuery::class, 'call'];
+    $u->graphql_body = [LaundryPriceIndexGraphql::class, 'body'];
+    $u->graphql_errors = [LaundryPriceIndexGraphql::class, 'errors'];
+    $u->result_basic = [LaundryPriceIndexResultBasic::class, 'call'];
+    $u->result_body = [LaundryPriceIndexResultBody::class, 'call'];
+    $u->result_headers = [LaundryPriceIndexResultHeaders::class, 'call'];
+    $u->transform_request = [LaundryPriceIndexTransformRequest::class, 'call'];
+    $u->transform_response = [LaundryPriceIndexTransformResponse::class, 'call'];
+});

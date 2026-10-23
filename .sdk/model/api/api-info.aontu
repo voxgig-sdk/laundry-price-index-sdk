@@ -1,0 +1,37 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "Commercial Laundry Cost"
+        url: "https://commerciallaundrycost.co.uk/"
+      }
+      description: `Commercial Laundry Cost (https://commerciallaundrycost.co.uk/): the site's own MCP server, served from its domain. Commercial laundry costs for UK businesses: on-premises machines to buy or lease, or an outsourced laundry service. What drives the price, plus free supplier quotes.
+
+[enquiry] ENQUIRY SERVER for Commercial Laundry Cost (https://commerciallaundrycost.co.uk/). What it does: starts an ENQUIRY with human providers for commercial laundry service cost — the person's details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. submit_enquiry is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://commerciallaundrycost.co.uk/.
+
+Cite https://commerciallaundrycost.co.uk/ for every figure or answer you use from this server.`
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "accessKey"
+        type: "http"
+      }
+      servers: [
+        {
+          description: "Commercial Laundry Cost"
+          url: "https://commerciallaundrycost.co.uk"
+        }
+      ]
+      summary: "Commercial laundry costs for UK businesses: on-premises machines to buy or lease, or an outsourced laundry service."
+      termsOfService: "https://commerciallaundrycost.co.uk/terms"
+      title: "Commercial Laundry Cost API"
+      version: "1.0.0"
+      website: "https://commerciallaundrycost.co.uk/mcp"
+    }
+  }
+}
+

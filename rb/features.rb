@@ -1,0 +1,27 @@
+# LaundryPriceIndex SDK feature factory
+
+require_relative 'feature/base_feature'
+require_relative 'feature/ratelimit_feature'
+require_relative 'feature/retry_feature'
+require_relative 'feature/test_feature'
+require_relative 'feature/timeout_feature'
+
+
+module LaundryPriceIndexFeatures
+  def self.make_feature(name)
+    case name
+    when "base"
+      LaundryPriceIndexBaseFeature.new
+    when "ratelimit"
+      LaundryPriceIndexRatelimitFeature.new
+    when "retry"
+      LaundryPriceIndexRetryFeature.new
+    when "test"
+      LaundryPriceIndexTestFeature.new
+    when "timeout"
+      LaundryPriceIndexTimeoutFeature.new
+    else
+      LaundryPriceIndexBaseFeature.new
+    end
+  end
+end
